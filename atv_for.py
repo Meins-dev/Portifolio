@@ -34,7 +34,7 @@ def cadastrar_restaurante():
     }
     
     restaurantes.append(restaurante)
-    print(f"\n✔️ Restaurante '{nome}' cadastrado com sucesso!")
+    print(f"\nRestaurante '{nome}' cadastrado com sucesso!")
     input("\nPressione Enter para voltar ao menu...")
 
 
@@ -69,17 +69,17 @@ def exibir_relatorio_completo():
     rest_mais_clientes = max(restaurantes, key=lambda x: x['clientes'])
 
 
-    print("🔹 CÁLCULOS E ANÁLISES GERAIS:")
+    print("CÁLCULOS E ANÁLISES GERAIS:")
     print(f"  • Restaurante com maior faturamento: {rest_maior_fat['nome']} (R$ {rest_maior_fat['faturamento']:.2f})")
     print(f"  • Restaurante com menor nº de cancelamentos: {rest_menor_canc['nome']} ({rest_menor_canc['pedidos_cancelados']} cancelados)")
-    print(f"  • Média de clientes (restaurantes > 20 funcionários): {media_clientes_mais_20_func:.1f}")
+    print(f"  • Média de clientes (restaurantes > 20 funcionários): {media_clientes_mais_20_func:.2f}")
     print(f"  • Percentual de pedidos cancelados em relação ao total: {perc_cancelados_geral:.2f}%")
     print(f"  • Média das notas dos clientes entre todos: {media_notas_geral:.2f}")
     print(f"  • Média de faturamento geral: R$ {media_faturamento_geral:.2f}")
     print("-" * 50)
 
 
-    print("🔹 LISTAGENS E RELATÓRIOS ESPECÍFICOS:")
+    print("LISTAGENS E RELATÓRIOS ESPECÍFICOS:")
     
     print("\n  • Mais de 100 pratos no cardápio:")
     for r in restaurantes:
@@ -107,7 +107,7 @@ def buscar_restaurante():
     for r in restaurantes:
         if nome_busca in r['nome'].lower():
             encontrado = True
-            print(f"\n📍 Resultado encontrado:")
+            print(f"\nResultado encontrado:")
             print(f"   Nome: {r['nome']} | Cidade: {r['cidade']}-{r['estado']}")
             print(f"   Faturamento: R$ {r['faturamento']:.2f} | Nota: {r['nota_media']}")
             print(f"   Funcionários: {r['funcionarios']} | Pratos: {r['pratos_cardapio']}")
@@ -170,7 +170,7 @@ def atualizar_restaurante():
             r['clientes'] = int(input(f"Nova Qtd. Clientes (Antigo: {r['clientes']}): "))
             r['nota_media'] = float(input(f"Nova Nota Média (Antigo: {r['nota_media']}): "))
             r['funcionarios'] = int(input(f"Nova Qtd. Funcionários (Antigo: {r['funcionarios']}): "))
-            print("\n✔️ Dados atualizados com sucesso!")
+            print("\nDados atualizados com sucesso!")
             input("\nPressione Enter para voltar...")
             return
             
@@ -186,7 +186,7 @@ def remover_restaurante():
     for r in restaurantes:
         if r['nome'].lower() == nome_busca:
             restaurantes.remove(r)
-            print(f"\n❌ Restaurante '{r['nome']}' removido do sistema.")
+            print(f"\nRestaurante '{r['nome']}' removido do sistema.")
             input("\nPressione Enter para voltar...")
             return
             
