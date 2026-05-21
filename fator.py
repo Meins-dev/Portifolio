@@ -1,4 +1,4 @@
-n = int(input("digite o fatorial"))
+n = int(input("digite o fatorial: "))
 fator = 1 
 for i in range(1,n+1):
     fator *= i
