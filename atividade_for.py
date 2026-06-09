@@ -1,3 +1,7 @@
+# se isso aqui quebrar eu desisto kkkkkkkkkkkkkkkkkkkkk 
+# fiz import no os pra fazer a função de limpar a tela vou assumir que posso fazer isso 
+# valeu professor pela ajuda
+
 import os
 restaurantes = []
 
