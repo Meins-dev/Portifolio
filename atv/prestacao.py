@@ -14,7 +14,6 @@ def relatorio_dia(dia, prestacoes):
     total = sum(valorPagamento(valor, atraso) for valor, atraso in prestacoes)
     print(f"Valor total a pagar no dia {dia}: R${total:.2f}")
     
-
 if __name__ == "__main__":
     prestacoes = []
     while True:

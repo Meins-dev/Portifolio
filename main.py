@@ -1,6 +1,7 @@
-x = int (input("bota um numero ai chef \n"))
-y = int (input("bota outro numero ai chef \n"))
+from salario import calcular_salario, limpar_tela
+import os
 
-soma = x + y
-
-print(f"resultado dessa soma ai chef {soma}")
+os.system('pause')
+while True: 
+    print("teste")
+    limpar_tela()
